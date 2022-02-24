@@ -29,6 +29,12 @@ class AlienInvasion:
 			self.bullets.update()
 			self._update_screen()
 
+			# get rid of invisible bullets
+			for bullet in self.bullets.copy():
+				if bullet.rect.botton <=0:
+					self.bulets.remove(bullet)
+			print(len(self.bullets))
+
 	def _check_events(self):
 		"""Respond to keypresses and mouse events"""
 		for event in pygame.event.get():
