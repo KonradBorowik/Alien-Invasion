@@ -27,13 +27,14 @@ class AlienInvasion:
 			self._check_events()
 			self.ship.update()
 			self.bullets.update()
-			self._update_screen()
 
 			# get rid of invisible bullets
 			for bullet in self.bullets.copy():
-				if bullet.rect.botton <=0:
-					self.bulets.remove(bullet)
+				if bullet.rect.bottom <=0:
+					self.bullets.remove(bullet)
 			print(len(self.bullets))
+
+			self._update_screen()
 
 	def _check_events(self):
 		"""Respond to keypresses and mouse events"""
