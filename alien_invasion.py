@@ -106,7 +106,7 @@ class AlienInvasion:
 		for bullet in self.bullets.sprites():
 			bullet.draw_bullet()
 
-		slef.aliens.draw(self.screen)
+		self.aliens.draw(self.screen)
 
 		"""Make the most recently drawn screen visible"""
 		pygame.display.flip()

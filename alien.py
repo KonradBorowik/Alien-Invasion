@@ -1,13 +1,12 @@
 import pygame
-
+from pygame.sprite import Sprite
 
 class Alien(Sprite):
 	"""Class to manage aliens"""
 
-	def __innit__(self, ai_game):
+	def __init__(self, ai_game):
 		"""Initialize the alien and set its starting position"""
-
-		super().__innit__()
+		super().__init__()
 		self.screen = ai_game.screen
 
 		# load the alien image and set its rect attribute
